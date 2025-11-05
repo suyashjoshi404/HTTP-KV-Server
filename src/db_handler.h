@@ -11,13 +11,14 @@ public:
               const std::string &password, const std::string &dbname, unsigned int port = 3306);
     ~DBHandler();
 
-    bool put(const std::string &key, const std::string &value); // insert or update
+    bool put(const std::string &key, const std::string &value);
     std::optional<std::string> get(const std::string &key);
     bool remove(const std::string &key);
 
 private:
     MYSQL *conn;
-    bool initialized;
-    std::mutex conn_mutex;                        // protect MySQL connection from concurrent access
-    bool execute_non_query(const std::string &q); // helper
+    std::mutex conn_mutex;
+
+    std::string escape(const std::string &str);
+    bool execute_query(const std::string &query);
 };
