@@ -1,0 +1,22 @@
+# Build outputs
+/build/
+/cmake-build-*/
+/CMakeCache.txt
+/CMakeFiles/
+/Makefile
+/*.cmake
+
+# Compiler artifacts
+*.o
+*.obj
+*.a
+*.so
+*.dll
+*.dylib
+
+# Editor junk
+*.swp
+*.swo
+*~
+
+venv/

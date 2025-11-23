@@ -1,0 +1,72 @@
+Running clients=2 duration=300s read_ratio=1.0
+CONFIG: clients=2 duration=300s read_ratio=1.0 key_space=10000 think_ms=0
+RESULTS:
+ Total time (s): 300
+ Clients: 2
+ Requests: 3699618  Success: 2317257 Fail: 1382361
+ Throughput (req/s): 12332
+ Avg latency (ms): 0.161023
+---
+Running clients=3 duration=300s read_ratio=1.0
+CONFIG: clients=3 duration=300s read_ratio=1.0 key_space=10000 think_ms=0
+RESULTS:
+ Total time (s): 300
+ Clients: 3
+ Requests: 4223742  Success: 2646124 Fail: 1577618
+ Throughput (req/s): 14079.1
+ Avg latency (ms): 0.21186
+---
+Running clients=4 duration=300s read_ratio=1.0
+CONFIG: clients=4 duration=300s read_ratio=1.0 key_space=10000 think_ms=0
+RESULTS:
+ Total time (s): 300
+ Clients: 4
+ Requests: 4460350  Success: 2791723 Fail: 1668627
+ Throughput (req/s): 14867.8
+ Avg latency (ms): 0.267876
+---
+Running clients=8 duration=300s read_ratio=1.0
+CONFIG: clients=8 duration=300s read_ratio=1.0 key_space=10000 think_ms=0
+RESULTS:
+ Total time (s): 300.691
+ Clients: 8
+ Requests: 4839364  Success: 3030656 Fail: 1808708
+ Throughput (req/s): 16094.2
+ Avg latency (ms): 0.49496
+---
+Running clients=16 duration=300s read_ratio=1.0
+CONFIG: clients=16 duration=300s read_ratio=1.0 key_space=10000 think_ms=0
+RESULTS:
+ Total time (s): 300.843
+ Clients: 16
+ Requests: 4863747  Success: 3046880 Fail: 1816867
+ Throughput (req/s): 16167.1
+ Avg latency (ms): 0.986953
+---
+Running clients=32 duration=300s read_ratio=1.0
+CONFIG: clients=32 duration=300s read_ratio=1.0 key_space=10000 think_ms=0
+RESULTS:
+ Total time (s): 300.972
+ Clients: 32
+ Requests: 4909441  Success: 3076412 Fail: 1833029
+ Throughput (req/s): 16311.9
+ Avg latency (ms): 1.95747
+---
+Running clients=64 duration=300s read_ratio=1.0
+CONFIG: clients=64 duration=300s read_ratio=1.0 key_space=10000 think_ms=0
+RESULTS:
+ Total time (s): 300.961
+ Clients: 64
+ Requests: 4766786  Success: 2984929 Fail: 1781857
+ Throughput (req/s): 15838.5
+ Avg latency (ms): 4.0325
+---
+Running clients=128 duration=300s read_ratio=1.0
+CONFIG: clients=128 duration=300s read_ratio=1.0 key_space=10000 think_ms=0
+RESULTS:
+ Total time (s): 301.026
+ Clients: 128
+ Requests: 4775203  Success: 2991537 Fail: 1783666
+ Throughput (req/s): 15863.1
+ Avg latency (ms): 8.05214
+---

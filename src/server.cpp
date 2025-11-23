@@ -14,7 +14,7 @@ int main(int argc, char **argv)
     unsigned int db_port = 3306;
 
     DBHandler db(db_host, db_user, db_pass, db_name, db_port);
-    LRUCache<std::string, std::string> cache(10000);
+    LRUCache<std::string, std::string> cache(1000);
 
     httplib::Server svr;
 
