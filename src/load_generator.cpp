@@ -24,9 +24,11 @@ void run_client_thread(int id, const std::string &server_host, int server_port,
 {
 
     httplib::Client cli(server_host.c_str(), server_port);
+    // Set read and write timeouts to 5 seconds to avoid hanging indefinitely
     cli.set_read_timeout(5, 0);
     cli.set_write_timeout(5, 0);
 
+    // Initialize random number generator with a unique seed per thread using ID and current time
     std::mt19937_64 rng(id + std::chrono::high_resolution_clock::now().time_since_epoch().count());
     std::uniform_int_distribution<int> keydist(1, key_space);
     std::uniform_real_distribution<double> opdist(0.0, 1.0);
@@ -34,6 +36,7 @@ void run_client_thread(int id, const std::string &server_host, int server_port,
     auto end_time = steady_clock::now() + seconds(duration_seconds);
     while (steady_clock::now() < end_time)
     {
+        // Generate a random number between 0.0 and 1.0 to decide operation type (Read vs Write)
         double op = opdist(rng);
         int k = keydist(rng);
         std::string key = "key" + std::to_string(k);
@@ -60,6 +63,7 @@ void run_client_thread(int id, const std::string &server_host, int server_port,
         }
 
         auto stop = high_resolution_clock::now();
+        // Calculate request latency in microseconds
         uint64_t lat = duration_cast<microseconds>(stop - start).count();
         stats.total_requests++;
         stats.total_latency_us += lat;
@@ -120,6 +124,7 @@ int main(int argc, char **argv)
     Stats stats;
 
     std::vector<std::thread> threads;
+    // Launch client threads, passing stats by reference to aggregate results safely
     for (int i = 0; i < clients; ++i)
     {
         threads.emplace_back(run_client_thread, i, host, port, duration_seconds, read_ratio, key_space, std::ref(stats), think_ms);
@@ -133,6 +138,7 @@ int main(int argc, char **argv)
     uint64_t succ = stats.success.load();
     uint64_t fail = stats.failure.load();
     uint64_t total = stats.total_requests.load();
+    // Calculate average latency in milliseconds, handling the case where total requests is zero
     double avg_latency_ms = (total ? (double)stats.total_latency_us.load() / total / 1000.0 : 0.0);
     double throughput = total / total_time_s;
 

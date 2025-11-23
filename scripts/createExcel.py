@@ -86,8 +86,8 @@ def main() -> None:
     parser.add_argument("logfile", help="Path to the results log file to parse.")
     parser.add_argument(
         "--workbook",
-        default="load_test_results.xlsx",
-        help="Excel workbook path to append to (default: load_test_results.xlsx)",
+        default=None,
+        help="Excel workbook path to append to (default: results/load_test_results.xlsx)",
     )
     parser.add_argument(
         "--sheet",
@@ -96,7 +96,25 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    with open(args.logfile, "r", encoding="utf-8") as f:
+    if args.workbook is None:
+        if os.path.basename(os.getcwd()) == "scripts" and os.path.isdir("../results"):
+            args.workbook = "../results/load_test_results.xlsx"
+        else:
+            args.workbook = "results/load_test_results.xlsx"
+
+    # Ensure results directory exists if workbook is in it
+    wb_dir = os.path.dirname(args.workbook)
+    if wb_dir:
+        os.makedirs(wb_dir, exist_ok=True)
+
+    # Check if logfile exists, if not check in results/
+    logfile = args.logfile
+    if not os.path.exists(logfile) and not os.path.isabs(logfile):
+        candidate = os.path.join("results", logfile)
+        if os.path.exists(candidate):
+            logfile = candidate
+
+    with open(logfile, "r", encoding="utf-8") as f:
         records = parse_results(f)
 
     if not records:

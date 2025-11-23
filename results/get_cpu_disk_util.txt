@@ -1,0 +1,140 @@
+Running clients=2 duration=60s read_ratio=1.0
+CONFIG: clients=2 duration=60s read_ratio=1.0 key_space=10000 think_ms=0
+RESULTS:
+ Total time (s): 60.0002
+ Clients: 2
+ Requests: 852491  Success: 852491 Fail: 0
+ Throughput (req/s): 14208.1
+ Avg latency (ms): 0.139679
+METRICS: clients=2 elapsed_s=60 core1_user_pct=45.42 core1_sys_pct=26.12 disk_read_kB_s=0.00 disk_write_kB_s=61.40 disk_util_pct=0.01
+---
+Running clients=3 duration=60s read_ratio=1.0
+CONFIG: clients=3 duration=60s read_ratio=1.0 key_space=10000 think_ms=0
+RESULTS:
+ Total time (s): 60.0002
+ Clients: 3
+ Requests: 920136  Success: 920136 Fail: 0
+ Throughput (req/s): 15335.5
+ Avg latency (ms): 0.194447
+METRICS: clients=3 elapsed_s=60 core1_user_pct=52.89 core1_sys_pct=32.82 disk_read_kB_s=0.00 disk_write_kB_s=2478.07 disk_util_pct=0.01
+---
+Running clients=4 duration=60s read_ratio=1.0
+CONFIG: clients=4 duration=60s read_ratio=1.0 key_space=10000 think_ms=0
+RESULTS:
+ Total time (s): 60.0002
+ Clients: 4
+ Requests: 937189  Success: 937189 Fail: 0
+ Throughput (req/s): 15619.8
+ Avg latency (ms): 0.254937
+METRICS: clients=4 elapsed_s=60 core1_user_pct=55.81 core1_sys_pct=31.93 disk_read_kB_s=0.00 disk_write_kB_s=55.67 disk_util_pct=0.01
+---
+Running clients=5 duration=60s read_ratio=1.0
+CONFIG: clients=5 duration=60s read_ratio=1.0 key_space=10000 think_ms=0
+RESULTS:
+ Total time (s): 60.0003
+ Clients: 5
+ Requests: 947628  Success: 947628 Fail: 0
+ Throughput (req/s): 15793.7
+ Avg latency (ms): 0.315459
+METRICS: clients=5 elapsed_s=60 core1_user_pct=55.88 core1_sys_pct=31.88 disk_read_kB_s=0.00 disk_write_kB_s=22.80 disk_util_pct=0.01
+---
+Running clients=6 duration=60s read_ratio=1.0
+CONFIG: clients=6 duration=60s read_ratio=1.0 key_space=10000 think_ms=0
+RESULTS:
+ Total time (s): 60.0004
+ Clients: 6
+ Requests: 949562  Success: 949562 Fail: 0
+ Throughput (req/s): 15825.9
+ Avg latency (ms): 0.378017
+METRICS: clients=6 elapsed_s=60 core1_user_pct=56.42 core1_sys_pct=31.28 disk_read_kB_s=0.00 disk_write_kB_s=58.07 disk_util_pct=0.02
+---
+Running clients=7 duration=60s read_ratio=1.0
+CONFIG: clients=7 duration=60s read_ratio=1.0 key_space=10000 think_ms=0
+RESULTS:
+ Total time (s): 60.0002
+ Clients: 7
+ Requests: 974360  Success: 974360 Fail: 0
+ Throughput (req/s): 16239.3
+ Avg latency (ms): 0.429966
+METRICS: clients=7 elapsed_s=60 core1_user_pct=57.01 core1_sys_pct=30.92 disk_read_kB_s=0.00 disk_write_kB_s=59.60 disk_util_pct=0.02
+---
+Running clients=8 duration=60s read_ratio=1.0
+CONFIG: clients=8 duration=60s read_ratio=1.0 key_space=10000 think_ms=0
+RESULTS:
+ Total time (s): 60.9755
+ Clients: 8
+ Requests: 972345  Success: 972345 Fail: 0
+ Throughput (req/s): 15946.5
+ Avg latency (ms): 0.49355
+METRICS: clients=8 elapsed_s=61 core1_user_pct=56.65 core1_sys_pct=30.09 disk_read_kB_s=0.00 disk_write_kB_s=34.49 disk_util_pct=0.02
+---
+Running clients=10 duration=60s read_ratio=1.0
+CONFIG: clients=10 duration=60s read_ratio=1.0 key_space=10000 think_ms=0
+RESULTS:
+ Total time (s): 60.2349
+ Clients: 10
+ Requests: 995054  Success: 995054 Fail: 0
+ Throughput (req/s): 16519.6
+ Avg latency (ms): 0.602234
+METRICS: clients=10 elapsed_s=60 core1_user_pct=56.76 core1_sys_pct=30.78 disk_read_kB_s=0.00 disk_write_kB_s=26.07 disk_util_pct=0.02
+---
+Running clients=12 duration=60s read_ratio=1.0
+CONFIG: clients=12 duration=60s read_ratio=1.0 key_space=10000 think_ms=0
+RESULTS:
+ Total time (s): 60.9322
+ Clients: 12
+ Requests: 979389  Success: 979389 Fail: 0
+ Throughput (req/s): 16073.4
+ Avg latency (ms): 0.736117
+METRICS: clients=12 elapsed_s=61 core1_user_pct=56.24 core1_sys_pct=30.23 disk_read_kB_s=0.00 disk_write_kB_s=42.89 disk_util_pct=0.02
+---
+Running clients=14 duration=60s read_ratio=1.0
+CONFIG: clients=14 duration=60s read_ratio=1.0 key_space=10000 think_ms=0
+RESULTS:
+ Total time (s): 60.6873
+ Clients: 14
+ Requests: 965391  Success: 965391 Fail: 0
+ Throughput (req/s): 15907.6
+ Avg latency (ms): 0.87121
+METRICS: clients=14 elapsed_s=61 core1_user_pct=56.28 core1_sys_pct=30.36 disk_read_kB_s=0.00 disk_write_kB_s=57.90 disk_util_pct=0.02
+---
+Running clients=16 duration=60s read_ratio=1.0
+CONFIG: clients=16 duration=60s read_ratio=1.0 key_space=10000 think_ms=0
+RESULTS:
+ Total time (s): 60.877
+ Clients: 16
+ Requests: 978812  Success: 978812 Fail: 0
+ Throughput (req/s): 16078.5
+ Avg latency (ms): 0.983785
+METRICS: clients=16 elapsed_s=61 core1_user_pct=56.46 core1_sys_pct=30.27 disk_read_kB_s=0.00 disk_write_kB_s=65.57 disk_util_pct=0.02
+---
+Running clients=32 duration=60s read_ratio=1.0
+CONFIG: clients=32 duration=60s read_ratio=1.0 key_space=10000 think_ms=0
+RESULTS:
+ Total time (s): 60.9366
+ Clients: 32
+ Requests: 969598  Success: 969598 Fail: 0
+ Throughput (req/s): 15911.6
+ Avg latency (ms): 1.99183
+METRICS: clients=32 elapsed_s=61 core1_user_pct=56.32 core1_sys_pct=30.22 disk_read_kB_s=0.00 disk_write_kB_s=61.97 disk_util_pct=0.03
+---
+Running clients=64 duration=60s read_ratio=1.0
+CONFIG: clients=64 duration=60s read_ratio=1.0 key_space=10000 think_ms=0
+RESULTS:
+ Total time (s): 60.9869
+ Clients: 64
+ Requests: 974160  Success: 974160 Fail: 0
+ Throughput (req/s): 15973.3
+ Avg latency (ms): 3.97652
+METRICS: clients=64 elapsed_s=61 core1_user_pct=56.38 core1_sys_pct=30.05 disk_read_kB_s=0.13 disk_write_kB_s=129.18 disk_util_pct=0.05
+---
+Running clients=128 duration=60s read_ratio=1.0
+CONFIG: clients=128 duration=60s read_ratio=1.0 key_space=10000 think_ms=0
+RESULTS:
+ Total time (s): 60.9986
+ Clients: 128
+ Requests: 947758  Success: 947757 Fail: 1
+ Throughput (req/s): 15537.4
+ Avg latency (ms): 8.17238
+METRICS: clients=128 elapsed_s=61 core1_user_pct=56.13 core1_sys_pct=30.17 disk_read_kB_s=0.79 disk_write_kB_s=351.41 disk_util_pct=0.09
+---
